@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profile of Jusmita Bhuyan, Computer Science Engineering student at Dhemaji Engineering College.">
+  <title>Jusmita Bhuyan | Student Profile</title>
+  <style>
+    :root {
+      --ink: #202938;
+      --muted: #667085;
+      --accent: #6257d9;
+      --accent-light: #eeecff;
+      --paper: #ffffff;
+      --background: #f5f6fb;
+      --border: #e6e8f0;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--background);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .topbar {
+      background: rgba(255,255,255,.9);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      max-width: 1000px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand { font-weight: 800; letter-spacing: -.04em; }
+    .nav a { text-decoration: none; color: var(--muted); font-size: .95rem; }
+    .nav-links { display: flex; gap: 22px; }
+    main { max-width: 1000px; margin: 48px auto; padding: 0 24px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap: 32px;
+      align-items: center;
+      padding: clamp(28px, 6vw, 60px);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 18px 55px rgba(35, 39, 70, .06);
+      overflow: hidden;
+    }
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+    h1 { margin: 18px 0 10px; font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.08; letter-spacing: -.06em; }
+    .subtitle { font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--muted); margin: 0 0 20px; }
+    .location { color: var(--muted); margin: 0 0 26px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 11px 17px; border-radius: 12px; text-decoration: none;
+      font-weight: 700; border: 1px solid var(--border); transition: transform .2s, background .2s;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { color: white; background: var(--accent); border-color: var(--accent); }
+    .monogram-wrap { display: flex; justify-content: center; }
+    .monogram {
+      width: min(240px, 100%); aspect-ratio: 1; border-radius: 35% 65% 58% 42% / 42% 40% 60% 58%;
+      display: grid; place-items: center; color: white; font-size: clamp(3.5rem, 8vw, 6rem);
+      font-weight: 800; letter-spacing: -.08em;
+      background: radial-gradient(circle at 25% 20%, #b8b1ff, transparent 38%),
+                  linear-gradient(135deg, #6257d9, #9c78d9 60%, #e5a8c7);
+      box-shadow: 0 20px 45px rgba(98,87,217,.22);
+    }
+    section { margin-top: 28px; }
+    .section-card { background: var(--paper); border: 1px solid var(--border); border-radius: 22px; padding: 28px; }
+    h2 { margin: 0 0 18px; font-size: 1.35rem; letter-spacing: -.03em; }
+    .education { display: flex; gap: 16px; align-items: flex-start; }
+    .school-icon {
+      flex: 0 0 48px; height: 48px; border-radius: 14px; background: var(--accent-light);
+      display: grid; place-items: center; color: var(--accent); font-size: 1.3rem;
+    }
+    .education h3 { margin: 0 0 4px; font-size: 1.05rem; }
+    .education p { margin: 0; color: var(--muted); }
+    .year { display: inline-block; margin-top: 10px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: .85rem; color: var(--muted); }
+    .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .contact-item { border: 1px solid var(--border); padding: 16px; border-radius: 14px; min-width: 0; }
+    .contact-item small { display: block; color: var(--muted); margin-bottom: 5px; }
+    .contact-item a { overflow-wrap: anywhere; text-decoration: none; font-weight: 650; }
+    .contact-item a:hover { color: var(--accent); }
+    footer { text-align: center; color: var(--muted); padding: 30px 24px 40px; font-size: .9rem; }
+    @media (max-width: 680px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 16px; flex-wrap: wrap; }
+      main { margin-top: 24px; padding: 0 14px; }
+      .hero { grid-template-columns: 1fr; padding: 28px; }
+      .monogram-wrap { grid-row: 1; justify-content: flex-start; }
+      .monogram { width: 120px; font-size: 3rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .section-card { padding: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">JB.</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="profile-name">
+      <div>
+        <span class="eyebrow">STUDENT PROFILE</span>
+        <h1 id="profile-name">Jusmita<br>Bhuyan</h1>
+        <p class="subtitle">Computer Science Engineering Student</p>
+        <p class="location">⌖ Biswanath, Assam, India</p>
+        <div class="actions">
+          <a class="button primary" href="mailto:jusmitabhuyan@gmail.com">Get in touch</a>
+          <a class="button" href="https://www.linkedin.com/in/jusmita-bhuyan-868060389" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="monogram-wrap" aria-label="Jusmita Bhuyan initials">
+        <div class="monogram" aria-hidden="true">JB</div>
+      </div>
+    </section>
+
+    <section id="about" class="section-card">
+      <h2>About</h2>
+      <p>I’m Jusmita Bhuyan, a student at Dhemaji Engineering College (DEC), pursuing a Bachelor of Technology in Computer Science Engineering.</p>
+    </section>
+
+    <section id="education" class="section-card">
+      <h2>Education</h2>
+      <div class="education">
+        <div class="school-icon" aria-hidden="true">✦</div>
+        <div>
+          <h3>Dhemaji Engineering College (DEC)</h3>
+          <p>Bachelor of Technology (BTech)</p>
+          <p>Computer Science Engineering</p>
+          <span class="year">2025 – 2029</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-card">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <small>Email</small>
+          <a href="mailto:jusmitabhuyan@gmail.com">jusmitabhuyan@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <small>LinkedIn</small>
+          <a href="https://www.linkedin.com/in/jusmita-bhuyan-868060389" target="_blank" rel="noopener noreferrer">View my profile ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Jusmita Bhuyan · Personal Profile</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
